@@ -1,1 +1,21 @@
-<p>contacts works!</p>
+<div>
+  <h3>send a message to the owner</h3>
+</div>
+
+<div>
+  <label>
+    your email:
+    <!--2 way binding. changes data on the backend and frontend isntantly-->
+    <input name="email" [(ngModel)]="email" />
+  </label>
+</div>
+
+<div>
+  <textarea
+    name="message"
+    rows="5"
+    columns="20"
+    [(ngModel)]="message"
+  ></textarea>
+  <button (click)="sendMessage()">send message!</button>
+</div>

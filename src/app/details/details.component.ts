@@ -12,8 +12,8 @@ export class DetailsComponent {
   listing: Listing;
 
   constructor(private route: ActivatedRoute) {}
-  ngOnInit() {
+  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id'); //retrieving id of each item using the angular routing
-    this.listing = fakeListings.find((listing) => this.listing.id === id);
+    this.listing = fakeListings.find(listing => listing.id === id);
   }
 }

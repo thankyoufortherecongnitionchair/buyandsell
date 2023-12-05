@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListingsPageComponent } from './listings-page/listings-page.component';
@@ -18,13 +18,10 @@ import { EditlistingComponent } from './editlisting/editlisting.component';
     ContactsComponent,
     MystuffComponent,
     NewListingComponent,
-    EditlistingComponent
+    EditlistingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
