@@ -1,1 +1,14 @@
-<p>mystuff works!</p>
+<div *ngFor="let listing of listings">
+  <h3>{{ listing.name }}</h3>
+  <p>{{ listing.description }}</p>
+  <p>${{ listing.price }}</p>
+  <div>
+    <a routerLink="/edit-listings/{{ listing.id }}"> <button>Edit</button></a>
+    <button (click)="onDeleteClicked(listing.id)">!!!delete!!!</button>
+  </div>
+</div>
+<hr />
+<hr />
+<a routerLink="/newlisting">
+  <button>Add a new listing</button>
+</a>

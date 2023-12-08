@@ -1,1 +1,11 @@
-<p>editlisting works!</p>
+<div>
+  <h2>edit listing</h2>
+  <app-listingdataform
+    buttonText="Save Changes!"
+    [currentName]="listing.name"
+    [currentDescription]="listing.description"
+    currentPrice="{{ listing.price }}"
+    (onSubmit)="onSubmit()"
+  ></app-listingdataform>
+  <!--square bracks used to pass entire object instead of just string...-->
+</div>
