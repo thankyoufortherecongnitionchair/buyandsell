@@ -1,0 +1,20 @@
+<form (ngSubmit)="onButtonClicked()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" [(ngModel)]="name" />
+  </div>
+  <div>
+    <label for="description">description:</label>
+    <input
+      id="description"
+      type="text"
+      name="description"
+      [(ngModel)]="description"
+    />
+  </div>
+  <div>
+    <label for="price">price:</label>
+    <input id="price" type="text" name="price" [(ngModel)]="price" />
+  </div>
+  <button type="submit">{{ buttonText }}</button>
+</form>

@@ -1,11 +1,14 @@
-<div>
+<div *ngIf="listing">
   <h2>edit listing</h2>
   <app-listingdataform
     buttonText="Save Changes!"
     [currentName]="listing.name"
     [currentDescription]="listing.description"
     currentPrice="{{ listing.price }}"
-    (onSubmit)="onSubmit()"
+    (onSubmit)="onSubmit($event)"
   ></app-listingdataform>
   <!--square bracks used to pass entire object instead of just string...-->
+</div>
+<div *ngIf="!listing">
+  <h3>loading</h3>
 </div>

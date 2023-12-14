@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 import { Listing } from '../types';
-import { fakeListings } from '../dummydata';
+import { ListingsService } from '../listings.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-contacts',
@@ -13,11 +13,18 @@ export class ContactsComponent {
   message: string = ''; //member vars
   listing: Listing;
   //inject mports into component
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private listingsservice: ListingsService
+  ) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.listing = fakeListings.find((listing) => listing.id === id);
+    this.listingsservice.getListingById(id).subscribe((listing) => {
+      this.listing = listing;
+      this.message = 'Hi, im interest in your product!';
+    });
     this.message = `im interested in ${this.listing.name.toLowerCase()}`;
   }
 

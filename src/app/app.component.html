@@ -1,8 +1,13 @@
 <div id="page-wrap">
-  <div id="max-width-column">
+  <div id="max-width-column" *ngIf="auth.user | async">
     <app-navbar></app-navbar>
     <div id="content-wrap">
       <router-outlet></router-outlet>
     </div>
+    <button (click)="signOutClicked()">Sign out</button>
+  </div>
+  <div *ngIf="!(auth.user | async)">
+    <h1>Please sign in first to access records</h1>
+    <button (click)="signInClicked()">Sign in Using google</button>
   </div>
 </div>
