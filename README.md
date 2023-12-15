@@ -1,4 +1,15 @@
-# Buyandsell
+# About
+This frontend component is free for customization and binding to your own backend in SQL. Observables have already been setup. All you must do is cuztomize them to your own database.
+# Customize -- 
+-- The code here to adopt it to your content management needs. Can be used as a:
+<li>  Comment management/storage </li>
+<li>    User authenticated and secure faculty suggestions box </li>
+<li>   Order management system  </li>
+<li>  Dashboard for daily operations </li>
+<div>
+  <img src="https://github.com/thankyoufortherecongnitionchair/content_management_system/assets/77891681/ea51f3b4-b36e-4d38-9cd9-e9ab3820f5e9" height="150" width="150">
+</div>
+<hr>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
@@ -25,3 +36,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<hr>
+Icon from <a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by vectorsmarket15 - Flaticon</a>
