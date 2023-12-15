@@ -1,0 +1,30 @@
+/*add min height.. cant see the navbar over the other content*/
+div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 15px;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover h1 {
+    color: #ffd700;
+}

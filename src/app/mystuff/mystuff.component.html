@@ -1,14 +1,36 @@
-<div *ngFor="let listing of listings">
+<!-- <div *ngFor="let listing of listings">
   <h3>{{ listing.name }}</h3>
   <p>{{ listing.description }}</p>
   <p>${{ listing.price }}</p>
   <div>
     <a routerLink="/edit-listings/{{ listing.id }}"> <button>Edit</button></a>
-    <button (click)="onDeleteClicked(listing.id)">!!!delete!!!</button>
+    <button (click)="onDeleteClicked(listing.id)" class="delete">Delete</button>
   </div>
 </div>
-<hr />
-<hr />
+
 <a routerLink="/newlisting">
   <button>Add a new listing</button>
-</a>
+</a> -->
+<!-- Display loading screen when isLoading is true -->
+<div *ngIf="isLoading" class="loading-screen">
+  <h3>Loading...</h3>
+</div>
+
+<!-- Display listings when isLoading is false -->
+<div *ngIf="!isLoading">
+  <div *ngFor="let listing of listings">
+    <h3>{{ listing.name }}</h3>
+    <p>{{ listing.description }}</p>
+    <p>${{ listing.price }}</p>
+    <div>
+      <a routerLink="/edit-listings/{{ listing.id }}"> <button>Edit</button></a>
+      <button (click)="onDeleteClicked(listing.id)" class="delete">
+        Delete
+      </button>
+    </div>
+  </div>
+
+  <a routerLink="/newlisting">
+    <button>Add a new listing</button>
+  </a>
+</div>

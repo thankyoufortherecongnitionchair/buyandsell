@@ -8,19 +8,24 @@ import { ListingsService } from '../listings.service';
 })
 export class MystuffComponent {
   listings: Listing[] = [];
+  isLoading:boolean=true;
   constructor(private listingsservice: ListingsService) {}
 
   ngOnInit(): void {
     this.listingsservice
       .getListingsForUser()
       .subscribe((listings) => (this.listings = listings));
+      this.isLoading=false;
+
   }
 
   onDeleteClicked(listingid: string): void {
+    this.isLoading=true;
     this.listingsservice.deleteListing(listingid).subscribe(() => {
       this.listings = this.listings.filter(
         (listing) => listing.id !== listingid
-      );
+      );this.isLoading=false;
+      
     });
   }
 }

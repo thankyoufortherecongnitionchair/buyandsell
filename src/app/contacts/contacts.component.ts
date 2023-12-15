@@ -23,7 +23,7 @@ export class ContactsComponent {
     const id = this.route.snapshot.paramMap.get('id');
     this.listingsservice.getListingById(id).subscribe((listing) => {
       this.listing = listing;
-      this.message = 'Hi, im interest in your product!';
+      this.message = 'Hi, im interested in your product!';
     });
     this.message = `im interested in ${this.listing.name.toLowerCase()}`;
   }

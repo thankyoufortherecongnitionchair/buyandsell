@@ -1,0 +1,46 @@
+/* Assuming these are the styles for your component or globally */
+
+body {
+   
+    font-family: Arial, sans-serif;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  app-listingdataform {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.4s;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+  }
+  

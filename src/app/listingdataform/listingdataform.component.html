@@ -4,16 +4,18 @@
     <input id="name" type="text" name="name" [(ngModel)]="name" />
   </div>
   <div>
-    <label for="description">description:</label>
+    <label for="description">Description:</label>
     <input
       id="description"
       type="text"
       name="description"
       [(ngModel)]="description"
+      class="textarea"
+      rows="5"
     />
   </div>
   <div>
-    <label for="price">price:</label>
+    <label for="price">Price:</label>
     <input id="price" type="text" name="price" [(ngModel)]="price" />
   </div>
   <button type="submit">{{ buttonText }}</button>

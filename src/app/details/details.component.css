@@ -1,0 +1,66 @@
+/* Assuming these are the styles for your component or globally */
+
+/* Style the container div when not loading */
+div:not(.loading) {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the paragraph */
+  p {
+    margin: 0 0 10px;
+    color: #666;
+  }
+  
+  /* Style the "go back" button */
+  a button {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  a button:hover {
+    background-color: #0b7dda;
+  }
+  
+  /* Style the headings */
+  h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Style the price */
+  p:last-child {
+    font-weight: bold;
+    color: #008000;
+  }
+  
+  /* Style the "contact poster" button */
+  a:last-child button {
+    background-color: #fe6a4f;
+  }
+  
+  a:last-child button:hover {
+    background-color: #ff4444;
+  }
+  
+  /* Style the loading div */
+  div.loading {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  div.loading h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  

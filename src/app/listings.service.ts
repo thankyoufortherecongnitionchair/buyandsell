@@ -48,6 +48,7 @@ export class ListingsService {
         user &&
           user.getIdToken().then((token) => {
             if (user && token) {
+              console.log(user.uid);
               this.http
                 .get<Listing[]>(
                   `/api/users/${user.uid}/listings`,
